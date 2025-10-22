@@ -11,6 +11,19 @@ body {
   border: none;
 }
 
+.burger:hover .top-bun{
+    animation: open-top 0.7s ease-in-out forwards;
+}
+
+.burger:hover .tomato{
+    animation: tilt 0.7s ease-in-out forwards infinite;
+    margin-bottom: 0.4rem;
+}
+
+.burger:hover .bottom-bun{
+    animation: open-bottom 0.7s ease-in-out forwards;
+}
+
 .burger span {
   display: block;
   width: 100%;
@@ -22,10 +35,11 @@ body {
 
 .burger .top-bun {
   display: block;
-  background-position: 0.5rem 0.8rem; 
+  background-position: 0.5rem 0.5rem; 
   background-color: #eba300;
   position: relative;
-  border-radius: 3rem 3rem 0 0;
+  height: 2.1rem;
+  border-radius: 9rem 9rem 0 0;
   content: '';
   background-image: radial-gradient(
     #FFE676 0%,
@@ -48,7 +62,7 @@ body {
 }
 
 .burger .patty {
-  background-color: a25a1a;
+  background-color: #a25a1a;
   width: 100%;
   height: 0.9rem;
 }
@@ -57,7 +71,7 @@ body {
   background-position: 0.5rem -3.5rem; 
   background-color: #eba300;
   border-radius: 0 0 1.7rem 1.7rem;
-  height: 1.2rem;
+  height: 0.8rem;
 }
 
 .burger .cheese {
@@ -79,3 +93,34 @@ body {
   border-top: 0.6rem solid #FFDD50;
   transform: translateX(-160%);
 }
+
+@keyframes open-top {
+  0% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-0.4rem);
+  }
+}
+
+@keyframes open-bottom {
+    0% {
+        transform: translateY(0rem);
+    }
+    100% {
+        transform: translateY(0.4rem);
+}
+}
+
+@keyframes tilt{
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
