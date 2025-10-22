@@ -21,6 +21,11 @@ body {
     margin-bottom: 0.4rem;
 }
 
+.burger:hover .patty{
+    animation: tilt 0.7s ease-in-out forwards infinite;
+    margin-top: 0.4rem;
+}
+
 .burger:hover .bottom-bun{
     animation: open-bottom 0.7s ease-in-out forwards;
 }
@@ -127,10 +132,9 @@ body {
 
 @keyframes rotate{
     0% {
-        background-position-x: 0.5rem;
+        background-position-x: 0rem;
     }
     100% {
         background-position-x: 2rem;
     }
 }
-
